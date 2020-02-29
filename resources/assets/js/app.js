@@ -15,6 +15,7 @@ require('./bootstrap');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('sl-user-list', require('./components/app/users/UserList.vue').default);
+Vue.component('sl-post-list', require('./components/app/posts/PostList.vue').default);
 
 // Vuex
 // import Vuex from 'vuex'

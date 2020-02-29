@@ -29,7 +29,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('desktop-example', 'ExampleController@getDesktopExample');
 
     Route::get('users', 'UserController@getUserList');
-
+    Route::get('/posts',function (){
+        return view('app.posts.post_list');
+    });
 });
 
 // Mobile Routes
@@ -74,6 +76,7 @@ Route::group(['prefix' => 'image'], function () {
 
     Route::get('{type}/{name}', 'ImageController@showTypeImage');
     Route::get('/{name}', 'ImageController@showOriginalImage');
+
 
 });
 

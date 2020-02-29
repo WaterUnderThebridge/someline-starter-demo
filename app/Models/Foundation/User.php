@@ -17,6 +17,7 @@ class User extends BaseUser
      *
      * @var array
      */
+    protected  $primaryKey='user_id';
     protected $fillable = [
         'name', 'email', 'password',
         'gender', 'birthday', 'country', 'timezone', 'locale', 'username', 'phone_number', 'status',
@@ -30,6 +31,10 @@ class User extends BaseUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function posts(){
+        return $this->hasMany(Post::class,'user_id','user_id');
+    }
 
     /**
      * Called when model is created

@@ -11,6 +11,7 @@ use Someline\Validators\UserValidator;
 /**
  * Class UserRepositoryEloquent
  * @package namespace Someline\Repositories\Eloquent;
+ * repository 可以把module ,validator，jsonView关联起来,；因为能用到
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {

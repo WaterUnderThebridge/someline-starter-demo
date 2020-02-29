@@ -29,7 +29,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     protected $testResponse;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -115,6 +115,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function getApi($uri, array $query = [], array $options = [])
     {
+        echo "url: $uri";
         $response = $this->client->get($uri, $query, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;

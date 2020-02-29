@@ -13,6 +13,8 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
+package-lock.json
+
 /storage/clockwork.sqlite
 *.iws
 /out/

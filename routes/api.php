@@ -34,7 +34,14 @@ $api->version('v1', [
                 $api->put('/{id}', 'UsersController@update');
                 $api->delete('/{id}', 'UsersController@destroy');
             });
-
+            // posts
+            $api->group(['prefix' => 'posts'], function (Router $api) {
+                $api->get('/', 'PostsController@index');
+                $api->post('/', 'PostsController@store');
+                $api->get('/{id}', 'PostsController@show');
+                $api->put('/{id}', 'PostsController@update');
+                $api->delete('/{id}', 'PostsController@destroy');
+            });
         });
 
     });
