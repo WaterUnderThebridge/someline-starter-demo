@@ -37,7 +37,7 @@
         "autosize": "^3.0.21",
         "babel-polyfill": "^6.26.0",
         "es6-shim": "^0.35.5",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "promise.prototype.finally": "^2.0.1",
         "vue-i18n": "^5.0.3",
         "vue-router": "^2.8.1",
